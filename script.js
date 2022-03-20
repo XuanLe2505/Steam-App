@@ -14,7 +14,7 @@ const renderList = async () => {
     const games = await getGames();
     ul.textContent = "";
     games.forEach((game) => {
-        const li = document.createElement("list")
+        const li = document.createElement("list");
         li.textContent = game.name;
         ul.appendChild(li);
     });
