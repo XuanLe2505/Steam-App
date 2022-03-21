@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Steam</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -31,68 +33,75 @@
                 <a href="#"> language <i class="fas fa-sort-down"></i></a>
             </div>
         </div>
+        <div class="responsive-header">
+            <div class="responsive-menu-logo">
+                <img src="./image/header_menu_hamburger.png">
+            </div>
+            <div class="responsive-header-logo">
+                <a href="#">
+                    <img src="./image/header_logo.png"alt="STEAM">
+                </a>
+            </div>
+        </div>
     </header>
     <!-- End header -->
 
     <!-- Start banner -->
     <div class="banner">
+        <div class="navbar-container">
+            <div class="navbar">
+                <div class="nav-item-container">
+                    <div class="nav-item">
+                        <button type="button" name="button">Your Store </button>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./image/new_white.svg" alt="icon">
+                        <button type="button" name="button">New & Noteworthy </button>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <img src="./image/new_white.svg" alt="icon">
+                        <button type="button" class="dropdown-btn" name="button">Categories</i></button>
+                        <div class="dropdown-content"></div>
+                    </div>
+                    <div class="nav-item">
+                        <button type="button" name="button">Points Shop </i></button>
+                    </div>
+                    <div class="nav-item">
+                        <button type="button" name="button">News </i></button>
+                    </div>
+                    <div class="nav-item">
+                        <button type="button" name="button">Labs </button>
+                    </div>
+                </div>
+                <div class="search-area">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <a href="#" class="search-btn"><img src="./image/search_icon_btn.png" alt="search-icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="fullscreen-bg">
             <video loop autoplay muted playsinline class="fullscreen-bg-video">
                 <source src="./image/webm_page_bg_english.webm" type="video/webm">
                 <source src="./image/mp4_page_bg_english.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="navbar">
-            <div class="nav-item-container">
-                <div class="nav-item">
-                    <button type="button" name="button">Your Store </button>
-                </div>
-                <div class="nav-item">
-                    <img src="./image/new_white.svg" alt="icon">
-                    <button type="button" name="button">New & Noteworthy </button>
-                </div>
-                <div class="nav-item dropdown">
-                    <img src="./image/new_white.svg" alt="icon">
-                    <button type="button" class="dropdown-btn" name="button">Categories </i></button>
-                    <div class="dropdown-content">
-                        <a href="#">All game</a>
-                        <a href="#">Action</a>
-                        <a href="#">Casual</a>
-                        <a href="#">FPS</a>
-                        <a href="#">MMO</a>
-                        <a href="#">RPG</a>
-                        <a href="#">RTS</a>
-                        <a href="#">Sport</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <button type="button" name="button">Points Shop </i></button>
-                </div>
-                <div class="nav-item">
-                    <button type="button" name="button">News </i></button>
-                </div>
-                <div class="nav-item">
-                    <button type="button" name="button">Labs </button>
-                </div>
-            </div>
-            <div class="search-area">
-                <div class="search-box">
-                    <input type="text" placeholder="Search">
-                    <a href="#"><img src="./image/search_icon_btn.png" alt="search-icon"></a>
-                </div>
-            </div>
+        <div class="fullscreen-mobile-bg">
+            <video loop autoplay muted playsinline class="fullscreen-bg-video">
+                <source src="./image/webm_page_bg_mobile_english.webm" type="video/webm">
+                <source src="./image/mp4_page_bg_mobile_english.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
     <!-- End banner -->
 
     <!-- Start main -->
-    <main>
+    <main class="container">
         <div class="items-container">
-            <div class="list-items">
-            
-            </div>
+            <h2 class="genres">All game</h2>
+            <div class="display-items"></div>
         </div>
-        
     </main>
     <!-- End main -->
 
@@ -152,7 +161,8 @@
         </div>
     </footer>
     <!-- End footer -->
-    <script src="script.js"></script>
+    <script src="getData.js"></script>
+    <script src="render.js"></script>
 </body>
 
 </html>
